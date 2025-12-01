@@ -5,7 +5,7 @@ This project successfully replaces RushMore Pizzeria's fragile JSON-based orderi
 🏗️ Architecture & Technology Stack
 Cloud Provider: Microsoft Azure
 
-Database: PostgreSQL 14 (Azure Database for PostgreSQL Flexible Server)
+Database: PostgreSQL 17 (Azure Database for PostgreSQL Flexible Server)
 
 Programming Language: Python 3.8+
 
@@ -54,7 +54,11 @@ Phase 1: Database Design & Modeling
 
 Designed normalized database schema
 
+<img width="959" height="502" alt="Rushmore_postgresql_azuredb" src="https://github.com/user-attachments/assets/b2375da0-b7ab-422c-ab81-b89310ec0004" />
+
 Created comprehensive ERD using draw.io
+
+<img width="811" height="651" alt="Schema Diagram drawio" src="https://github.com/user-attachments/assets/fa605ebe-83a9-401d-98b9-5948921b51cd" />
 
 Defined table relationships and constraints
 
@@ -71,12 +75,17 @@ Set up firewall rules for secure access
 
 Deployed empty database schema to cloud
 
+<img width="953" height="474" alt="Rushmore_pizzeria_server" src="https://github.com/user-attachments/assets/14815a3e-e421-442d-b882-1520714d2f7a" />
+
+
 Phase 3: Data Population & Masking
 ✅ Completed Tasks:
 
 Developed Python data generation script using Faker
+<img width="786" height="250" alt="image" src="https://github.com/user-attachments/assets/1ab4c64d-051c-4758-875b-fcaef85ae6fc" />
 
 Implemented environment-based configuration
+<img width="1338" height="450" alt="image" src="https://github.com/user-attachments/assets/ada88653-dc0e-4195-a9ac-f480b4a1f104" />
 
 Generated realistic synthetic data:
 
@@ -93,6 +102,8 @@ Generated realistic synthetic data:
 15,000+ order line items
 
 Maintained referential integrity during population
+<img width="1932" height="1202" alt="image" src="https://github.com/user-attachments/assets/c7988851-c483-4b39-bd4b-116f39798320" />
+
 
 Phase 4: Validation & Testing
 ✅ Completed Tasks:
@@ -176,6 +187,7 @@ python scripts/populate_database.py --test-connection
 
 # Keep existing data
 python scripts/populate_database.py --keep-existing
+
 🔍 Business Intelligence & Analytics
 Pre-built Analytical Queries
 The system includes comprehensive SQL queries for business analysis:
@@ -191,6 +203,7 @@ Customer lifetime value
 
 2. Customer Insights
 Top 10 most valuable customers
+<img width="751" height="472" alt="Top10MostValue" src="https://github.com/user-attachments/assets/4899449a-19fe-4c24-bf89-ffb4d6ef412e" />
 
 Customer retention rates
 
@@ -198,6 +211,7 @@ New vs returning customer analysis
 
 3. Product Performance
 Most popular menu items
+<img width="750" height="481" alt="MostPopularMenuItem" src="https://github.com/user-attachments/assets/bc46c900-bc59-447e-be73-b7749e0eacda" />
 
 Category performance analysis
 
@@ -205,6 +219,7 @@ Ingredient usage patterns
 
 4. Operational Metrics
 Busiest hours and days
+<img width="751" height="494" alt="BusiestHour" src="https://github.com/user-attachments/assets/deb5d133-2808-4b24-82ab-ed09acd78a1a" />
 
 Store performance comparison
 
@@ -223,6 +238,8 @@ JOIN Order_Items oi ON mi.item_id = oi.item_id
 GROUP BY mi.item_id, mi.name, mi.category
 ORDER BY total_sold DESC
 LIMIT 10;
+
+
 🔒 Security & Compliance
 Data Protection
 Synthetic Data Generation: No real customer PII used
